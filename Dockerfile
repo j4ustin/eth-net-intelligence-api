@@ -31,7 +31,6 @@
 #
 ## If you now want to deploy a new client version, just redo the second step.
 
-
 FROM debian
 
 RUN apt-get update &&\
