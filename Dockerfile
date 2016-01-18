@@ -11,9 +11,9 @@
 ## Make sure, to mount your configured 'app.json' into the container at
 ## '/home/ethnetintel/eth-net-intelligence-api/app.json', e.g.
 ## '-v /path/to/app.json:/home/ethnetintel/eth-net-intelligence-api/app.json'
-## 
+##
 ## Note: if you actually want to monitor a client, you'll need to make sure it can be reached from this container.
-##       The best way in my opinion is to start this container with all client '-p' port settings and then 
+##       The best way in my opinion is to start this container with all client '-p' port settings and then
 #        share its network with the client. This way you can redeploy the client at will and just leave 'ethnetintel' running. E.g. with
 ##       the python client 'pyethapp':
 ##
@@ -46,7 +46,7 @@ RUN apt-get update &&\
 RUN adduser ethnetintel
 
 RUN cd /home/ethnetintel &&\
-    git clone https://github.com/cubedro/eth-net-intelligence-api &&\
+    git clone https://github.com/j4ustin/eth-net-intelligence-api &&\
     cd eth-net-intelligence-api &&\
     npm install &&\
     npm install -g pm2
